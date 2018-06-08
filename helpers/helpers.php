@@ -1,10 +1,20 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  
-function assets_url() {
-    return base_url();
+/**
+  *@var insert ton url sur base_url
+  *{ca permet de recevoir ton url, tu dois ecrire cela car c'est important}
+*/
+ $base_url = '';
+
+function base_url() {
+    return $base_url;
 }
 
+/**
+  *@function le type la variable 
+  *{css_url : pour le varible css , il suffit de mettre css_url('style') sans le css et lui meme va faire les chemin }
+*/
 
 if ( ! function_exists('css_url'))
 
@@ -20,6 +30,10 @@ if ( ! function_exists('css_url'))
 
 }
 
+/**
+  *@function pour javascript
+  *{css_url : pour le varible css , il suffit de mettre css_url('script') sans le js et lui meme va faire les chemin }
+*/
 
 if ( ! function_exists('js_url'))
 
@@ -34,22 +48,26 @@ if ( ! function_exists('js_url'))
     }
 
 }
-
+/**
+  *@function pour les images 
+  *{css_url : pour le varible css , il suffit de le mettre dans les src en images lui meme il fera le chemein donc c est src= '<?php img_url()?> ' }
+*/
 
 if ( ! function_exists('img_url'))
 
 {
-
     function img_url($nom)
 
     {
-
         return base_url() . 'assets/images/' . $nom;
-
     }
 
 }
 
+/**
+  *@function pour les images 
+  *{css_url : pour le varible css , il suffit de le mettre dans les src en images lui meme il fera le chemein donc c est src= '<?php img_url()?> ' il est indetique au premier mais unpeu different}
+*/
 
 if ( ! function_exists('img'))
 
@@ -64,6 +82,11 @@ if ( ! function_exists('img'))
     }
 
 }
+/**
+  *@function pour le comptage du temps 
+  * il sera utiliser apres ' }
+*/
+
 
 if(!function_exists('comptime')){
     function comptime($time){
