@@ -22,6 +22,8 @@
 							</legend>
 
 							<div class="button_set">
+								<input type="hidden" name="nom">
+								
 								<div class="mx-2 row">
 									<div class=" col-6">
 										<button class="btn btn-primary btn-lg button_width" >Begin the work</button>
