@@ -4,12 +4,11 @@
   *@var insert ton url sur base_url
   *{ca permet de recevoir ton url, tu dois ecrire cela car c'est important, sans / au dernier}
 */
- $base_url = 'http://localhost:81/appHost.com';
 
 function base_url() {
+    $base_url = 'http://localhost:81/hotshiproj';
     return $base_url;
 }
-
 /**
   *@function le type la variable 
   *{css_url : pour le varible css , il suffit de mettre css_url('style') sans le css et lui meme va faire les chemin }
@@ -58,7 +57,7 @@ if ( ! function_exists('img_url'))
     function img_url($nom)
 
     {
-        return base_url() . '/assets/images/' . $nom;
+        return base_url() . '/assets/img/' . $nom;
     }
 
 }
@@ -72,11 +71,11 @@ if ( ! function_exists('img'))
 
 {
 
-    function img($nom, $alt = '')
+    function img($nom, $alt = '', $className='')
 
     {
 
-        return '<img src="' . img_url($nom) . '" alt="' . $alt . '" />';
+        return '<img class="'.$className.'" src="' . img_url($nom) . '" alt="' . $alt . '" />';
 
     }
 
