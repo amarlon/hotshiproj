@@ -1,11 +1,10 @@
 <?php
-if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  
 /**
   *@var insert ton url sur base_url
-  *{ca permet de recevoir ton url, tu dois ecrire cela car c'est important}
+  *{ca permet de recevoir ton url, tu dois ecrire cela car c'est important, sans / au dernier}
 */
- $base_url = '';
+ $base_url = 'http://localhost:81/appHost.com';
 
 function base_url() {
     return $base_url;
@@ -24,7 +23,7 @@ if ( ! function_exists('css_url'))
 
     {
 
-        return base_url() . 'assets/css/' . $nom . '.css';
+        return base_url() . '/assets/css/' . $nom . '.css';
 
     }
 
@@ -43,7 +42,7 @@ if ( ! function_exists('js_url'))
 
     {
 
-        return base_url() . 'assets/javacript/' . $nom . '.js';
+        return base_url() . '/assets/javacript/' . $nom . '.js';
 
     }
 
@@ -59,7 +58,7 @@ if ( ! function_exists('img_url'))
     function img_url($nom)
 
     {
-        return base_url() . 'assets/images/' . $nom;
+        return base_url() . '/assets/images/' . $nom;
     }
 
 }
@@ -83,10 +82,33 @@ if ( ! function_exists('img'))
 
 }
 /**
+  *@function view  
+  * il sera utiliser apres ' }
+*/
+if ( ! function_exists('view'))
+
+{
+    function view($nom)
+
+    {
+        return base_url() . '/views/' . $nom . '.php';
+    }
+
+}
+/**
   *@function pour le comptage du temps 
   * il sera utiliser apres ' }
 */
+if ( ! function_exists('view'))
 
+{
+    function view($nom)
+
+    {
+        return base_url() . '/views/' . $nom . '.php';
+    }
+
+}
 
 if(!function_exists('comptime')){
     function comptime($time){
