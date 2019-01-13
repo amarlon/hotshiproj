@@ -6,10 +6,10 @@
     public function index(){
     	include('system/setting.php');
         $load->helpers('helpers');
-    	$load->view('hotshiv'); 
+    	$load->view('homev'); 
     }
      public function time(){
     	echo "sss";
     }
  } 
- $hotshi =new Hotshi();
+ $hotshi =new System();
