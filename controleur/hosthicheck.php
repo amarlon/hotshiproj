@@ -1,6 +1,6 @@
 <?php 
 
- class Hotshi 
+ class System
  {
 
     public function index(){
